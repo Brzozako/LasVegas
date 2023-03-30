@@ -18,6 +18,7 @@ void Forest::Proba(int height, int width) {
   }
 }
 
+
 Forest::~Forest() {
   for (auto t : trees) {
     delete t;
