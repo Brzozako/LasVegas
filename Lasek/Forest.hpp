@@ -13,7 +13,7 @@ public:
   vector<Tree *> trees;
 
   void AddTree(int h, char s, string c, int x, int y);
-
+  void PrintForest();
   Forest(int h, int w);
 
   ~Forest();

@@ -24,8 +24,13 @@ void Tree::printTree() {
 Tree::Tree(int h, char s, string c) {
   height = h;
   symbol = s;
-  color = c;
 
+  if (c == "green")
+    color = "\033[1;32m";
+  if (c == "yellow")
+    color = "\033[1;33m";
+  if (c == "red")
+    color = "\033[1;31m";
   tab = new int *[height];
 
   for (int j = 0; j < height; j++) {
@@ -45,5 +50,6 @@ Tree::~Tree() {
     delete tab[j];
   }
   delete tab;
+  counter--;
   cout << endl << "Kasuje drzewo" << endl;
 }

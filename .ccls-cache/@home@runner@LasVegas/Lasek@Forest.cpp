@@ -33,3 +33,18 @@ Forest::~Forest() {
   delete tab;
   trees.clear();
 }
+void Forest::PrintForest() {
+  int i, j;
+  for (int j = 0; j < H; j++) {
+    for (int i = 0; i < W; i++) {
+      int k = tab[j][i];
+      if (k) {
+        cout << trees[k - 1]->color;
+        cout << trees[k - 1]->symbol;
+      } else
+        cout << " ";
+    }
+    cout << endl;
+  }
+  
+}

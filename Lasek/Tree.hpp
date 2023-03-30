@@ -12,8 +12,9 @@ private:
   int y;
 
 public:
+  static int counter;  
   void printTree();
-
+  
   Tree(int h, char s = '*', string c = "white");
 
   ~Tree();
