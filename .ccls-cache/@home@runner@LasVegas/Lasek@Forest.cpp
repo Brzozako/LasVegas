@@ -1,4 +1,5 @@
 #include "Forest.hpp"
+#include <cassert>
 using namespace std;
 void Forest::AddTree(int h, char s, string c, int y, int x) {
   Tree *tree = new Tree(h, s, c);
@@ -38,6 +39,7 @@ void Forest::PrintForest() {
   for (int j = 0; j < H; j++) {
     for (int i = 0; i < W; i++) {
       int k = tab[j][i];
+      assert(k >= 0 && k <= trees.size());
       if (k) {
         cout << trees[k - 1]->color;
         cout << trees[k - 1]->symbol;
@@ -46,5 +48,4 @@ void Forest::PrintForest() {
     }
     cout << endl;
   }
-  
 }
