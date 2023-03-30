@@ -3,6 +3,8 @@
 #include <vector>
 using namespace std;
 class Forest {
+
+int x, y;
 public:
   int H;
   int W;
@@ -12,9 +14,7 @@ public:
 
   void AddTree(int h, char s, string c, int x, int y);
 
-  void Proba(int height, int width);
-
-  Forest();
+  Forest(int h, int w);
 
   ~Forest();
 };

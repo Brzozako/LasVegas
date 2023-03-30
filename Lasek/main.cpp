@@ -4,11 +4,17 @@ using namespace std;
 #include <vector>
 
 int main() {
+  int i, j;
   Tree tree(5, 'A', "\033[1;31m");
   tree.printTree();
 
-    Forest forest;
-    forest.AddTree(5, '#', "\033[1;31m", 2, 2);
+  Forest las(15, 60);
+  las.AddTree(5, '#', "green", 2, 2);
+  las.AddTree(7, '@', "green", 3, 30);
 
-  // wypisać forest funkcją printForest i drzewka itd..
+  for (j = 0; j < las.H; j++) {
+    for (i = 0; i < las.W; i++)
+      cout << las.tab[j][i];
+    cout << endl;
+  }
 }
